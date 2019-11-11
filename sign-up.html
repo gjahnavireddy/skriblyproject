@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="signup.css">
+</head>
+<style>
+        input[type=text],
+        input[type=email],
+        input[type=password] {
+        padding: 12px 10px;
+        margin: 8px 0;
+        display: flex;
+        box-sizing: border-box;
+        border: 1.5px solid #ccc;
+        
+        }
+        .signup{
+        width:400px;
+        height:540px;
+        background:white;
+        color:black;
+        top:50%;
+        left:50%;
+        position: absolute;
+        transform: translate(-50%,-50%);
+        box-sizing: border-box;
+        padding: 25px 35px;
+        border-radius: 15px;
+        }
+       
+        label{
+            
+            font-family: Arial, sans-serif;
+            font-size:18px;
+        }
+        h1{
+            
+            font-family:Arial, sans-serif;
+            font-size:35px;
+            text-align: center;
+        }
+        body{
+            background-color:peachpuff;
+        }
+        .button{
+            background-color: palevioletred;
+            text-align: center;
+            padding: 15px 10px;
+            margin: 10px 5px;
+            border: none;
+            cursor: pointer;
+            width: 96%;
+            border-radius: 18px;
+        }
+         a{
+            display: inline-block;
+            font-family:Arial, sans-serif;
+            text-decoration: none;
+            font-size: 13.5px;
+            line-height: 15px;
+            color:darkgray;
+            padding-left: 85px;
+            
+            }
+        a:hover{
+        color:black;
+        }   
+    </style>
+<body>
+
+    <div class="signup">
+        <form action="action1.php" method="post" onSubmit = "return check(this)" onload="clear()">
+            <h1>Sign Up</h1>
+            <label><b>Name</b></label>
+            <input type="text" name="name" placeholder="Enter Name" size=47 required>
+            <label><b>Email</b></label>
+            <input type="email" name="email" placeholder="Enter Email-Id" size=47 required>
+            <label><b>Password</b></label>
+            <input type="password" name="password" id="#psd" placeholder="Enter Password" size=47 maxlength="10" required>
+            <label><b>Confirm Password</b></label>
+            <input type="password" name="cfmpassword" placeholder="Confirm Password" size=47 maxlength="10" required>
+            <input type="submit" value="Sign-Up" class="button" ><br>
+            <a href="index.html">Already have an account?</a>
+        </form>
+    </div>
+
+    <script>
+    function check(form)
+    {
+        if(form.password.value!=form.cfmpassword.value)
+          {
+            alert("Passwords donot match");
+           // return location.href="sign-up.html";
+           form.password.value="";
+           form.cfmpassword.value="";
+           return false;
+          }  
+        
+    }
+    var ele=document.getElementById("psd")
+    ele .onmouseout=checkForm;
+    function checkForm(form)
+  {
+    re = /^\w+$/;
+    if(!re.test(form.name.value)) {
+      alert("Error: name must contain only letters, numbers and underscores!");
+      form.name.focus();
+      return false;
+    }
+
+    if(form.password.value != "" && form.password.value == form.cfmpassword.value) {
+      if(form.password.value.maxlength < 10) {
+        alert("Error: Password must contain at least ten characters!");
+        form.password.focus();
+        return false;
+      }
+      if(form.password.value == form.name.value) {
+        alert("Error: Password must be different from name!");
+        form.password.focus();
+        return false;
+      }
+      re = /[0-9]/;
+      if(!re.test(form.password.value)) {
+        alert("Error: password must contain at least one number (0-9)!");
+        form.password.focus();
+        return false;
+      }
+      re = /[a-z]/;
+      if(!re.test(form.password.value)) {
+        alert("Error: password must contain at least one lowercase letter (a-z)!");
+        form.password.focus();
+        return false;
+      }
+      re = /[A-Z]/;
+      if(!re.test(form.password.value)) {
+        alert("Error: password must contain at least one uppercase letter (A-Z)!");
+        form.password.focus();
+        return false;
+      }
+    } else {
+      alert("Error: Please check that you've entered and confirmed your password!");
+      form.password.focus();
+      return false;
+    }
+  }
+  function clear()
+  {
+    form.password.value="";
+    form.cfmpassword.value="";
+    form.name.value="";
+    form.email.value="";
+    console.log("hellllo");
+  }
+    </script>
+    
+</body>
+
+</html>
