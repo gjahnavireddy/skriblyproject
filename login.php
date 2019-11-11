@@ -1,3 +1,57 @@
+<?php
+
+$user="root";
+$pass="";
+$db="testlogin";
+$conn=mysqli_connect("localhost",$user,$pass,$db) or die("unable to connect");
+//echo "connected";
+if($_SERVER['REQUEST_METHOD']=="POST")
+{
+      $name=mysqli_real_escape_string($conn,$_POST['username']);
+        $psd=md5($_POST['password']);
+    
+}
+
+if(isset($name) && isset($psd) && !empty($name) && !empty($psd))
+{
+$sql = "SELECT Username, Password FROM users";
+$check=mysqli_query($conn,$sql);
+$flag=0;
+if (mysqli_num_rows($check) > 0)
+{
+    $spsd=substr($psd,0,10);
+    //echo $name;
+    //echo $spsd;
+    while($row=mysqli_fetch_assoc($check))
+    {
+    $check_username=$row['Username'];
+    $check_password=$row['Password'];
+    if($name == $check_username && $spsd == $check_password){
+            $flag=1;
+            break;
+        }
+
+    }
+    
+   if($flag==1)
+   {
+       echo "<script>window.location = 'mikeross.html'</script>";
+   } 
+   else
+   {
+        echo "<script>
+            alert('The entered username or password does not exist.Please enter your details again.');
+            window.location.href='phlogin.php'</script>";
+        unset($name);
+        unset($psd);
+   }
+}
+}
+mysqli_close($conn);
+?>
+
+
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -70,7 +124,7 @@
 
     <body>
         <div class="login">
-             <form action="action_page.php" method="post">
+             <form action="login.php" method="post">
                 <div class="container">
                     <div class="head"><label id="head1">Welcome Back </label></div><br><br>
                     <label id="up" ><b>Username</b></label><br>
@@ -98,6 +152,11 @@
             }
             function getProfile(){
                 //code for validity
+                 if(form.password.value=="" || form.user.value=="")
+                {
+                    alert("Please fill the field");
+                    return false;
+                }
                 return location.href="mikeross.html"
             }
         </script>
