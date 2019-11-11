@@ -1,9 +1,9 @@
 # skriblyproject
 Web tech Project SEM3 project name-SKRIBLY  
-## IDEA:  
+### IDEA:  
 This is a fun, simple and interactive website designed to help users create their own comic strip and share them.  
  
-## DETAILS:  
+### DETAILS:  
  A user must create a free account and register themselves in order to start creating projects. The home page will consist of a slideshow of select works made by users in the background.  
 If a user is finding it difficult to navigate the website, a tutorial demonstrating all the features is available to aid them. This will open in a pop-up window.  
 They can create comic strips based on a few “templates” that the website would provide. These would include a set of characters (boy, girl, man, woman, animals, book characters, etc.), comic strip layout (grid of 4 boxes, row of 3 boxes, row of 4 boxes, etc.), things/objects, dialogue bubbles, background/scene, etc.  
@@ -16,6 +16,6 @@ Each work will be given a watermark which is unique to every user so as to preve
  
 This project stands out as most of the current websites do not offer the feature of displaying your work; rather they are tools using which you create a comic and then download it. There isn’t any option to view other artist’s work.  
  
-## FUTURE IMPLEMENTATION:  
+### FUTURE IMPLEMENTATION:  
 A feature where the user may upload their own picture files to the comic.  
 A feature where the user can draw using mouse input.  
