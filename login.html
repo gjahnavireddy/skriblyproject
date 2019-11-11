@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+    <head>
+            <link href="basic.css" rel="stylesheet">
+    </head>
+    <style>
+    input[type=text],
+    input[type=password] {
+    padding: 12px 8px;
+    margin: 5px 0;
+    display: flex;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    
+    }
+    .login{
+    width:400px;
+    height:480px;
+    background:white;
+    color:black;
+    top:50%;
+    left:50%;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    box-sizing: border-box;
+    padding: 50px 28px;
+    border-radius: 16px;
+    }
+   
+    #up{
+        
+        font-family: Arial, sans-serif;
+        font-size:20px;
+    }
+    .head{
+        
+        font-family:Arial, sans-serif;
+        font-size:35px;
+        text-align: center;
+    }
+    body{
+        background-color:peachpuff;
+    }
+    .button{
+        background-color: palevioletred;
+        text-align: center;
+        padding: 14px 10px;
+        margin: 6px 10px;
+        border: none;
+        cursor: pointer;
+        width: 42.7%;
+        border-radius: 18px;
+    }
+     a{
+        display: inline-block;
+        font-family:Arial, sans-serif;
+        text-decoration: none;
+        font-size: 14px;
+        line-height: 15px;
+        color:darkgray;
+        
+        }
+    a:hover{
+    color:black;
+    }   
+    
+</style>
+
+    <body>
+        <div class="login">
+             <form action="login.php" method="post">
+                <div class="container">
+                    <div class="head"><label id="head1">Welcome Back </label></div><br><br>
+                    <label id="up" ><b>Username</b></label><br>
+                        <input type="text" placeholder="Enter Username" size="45" name="uname" required>
+                            <br>
+                        <label id="up"><b>Password</b></label><br>
+                            <input type="password" placeholder="Enter Password" size="45" maxlength="10" name="psw" required>
+                            <br>
+                            
+                        <button type="submit" class="button" onclick ="getProfile()">Login</button>
+                        <button type="button" class="button" onclick="back()">Cancel</button><br><br>
+                        <a href="#"  style=" padding-left: 95px;" >Forgot password?</a><br>
+                        <a href="#" style="padding-left: 80px"onclick="location.href='sign-up.html'">Don't have an account</a>
+                </div>
+            </form>
+        </div>
+        <script>
+            function back()
+            {
+               var check= confirm("Are you sure?");
+               if(check == true)
+                    return location.href='index.html';
+            
+            }
+            function getProfile(){
+                //code for validity
+                 if(form.password.value=="" || form.user.value=="")
+                {
+                    alert("Please fill the field");
+                    return false;
+                }
+                return location.href="mikeross.html"
+            }
+        </script>
+    </body>
+</html>
