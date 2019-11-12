@@ -35,6 +35,12 @@ mysqli_close($conn);
     <link rel="stylesheet" href="signup.css">
 </head>
 <style>
+        body{
+        background-image: url('bg3.jpg');
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        }
+    
         input[type=text],
         input[type=email],
         input[type=password] {
