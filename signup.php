@@ -113,7 +113,7 @@ mysqli_close($conn);
             <label><b>Confirm Password</b></label>
             <input type="password" name="cfmpassword" placeholder="Confirm Password" size=47 maxlength="10" required autocomplete="off">
             <input type="submit" value="Sign-Up" class="button" ><br>
-            <a href="#" onclick="location.href='login.html'">Already have an account?</a>
+            <a href="#" onclick="location.href='login.php'">Already have an account?</a>
         </form>
     </div>
 
