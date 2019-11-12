@@ -137,7 +137,7 @@ mysqli_close($conn);
                         <button type="submit" class="button" onclick ="getProfile()">Login</button>
                         <button type="button" class="button" onclick="back()">Cancel</button><br><br>
                         <a href="#"  style=" padding-left: 95px;" >Forgot password?</a><br>
-                        <a href="#" style="padding-left: 80px"onclick="location.href='sign-up.html'">Don't have an account</a>
+                        <a href="#" style="padding-left: 80px"onclick="location.href='signup.php'">Don't have an account</a>
                 </div>
             </form>
         </div>
