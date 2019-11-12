@@ -107,7 +107,7 @@ mysqli_close($conn);
             <label><b>Email</b></label>
             <input type="email" name="email" placeholder="Enter Email-Id" size=47 required autocomplete="off">
             <label><b>Password</b></label>
-            <input type="password" name="password" id="#psd" placeholder="Enter Password" size=47 maxlength="10" required 
+            <input type="password" name="password" id="psd" placeholder="Enter Password" size=47 maxlength="10" required 
              pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{10,10}" title="Must contain at least one number and one uppercase and lowercase letter, and 10 characters" 
              autocomplete="off">
             <label><b>Confirm Password</b></label>
