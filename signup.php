@@ -109,7 +109,7 @@ mysqli_close($conn);
     <div class="signup">
         <form action="signup.php" method="post" onSubmit = "return check(this)">
             <h1>Sign Up</h1>
-            <label><b>Name</b></label>
+            <label><b>Username</b></label>
             <input type="text" name="username" placeholder="Enter Username" size=47 required autocomplete="off">
             <label><b>Email</b></label>
             <input type="email" name="email" placeholder="Enter Email-Id" size=47 required autocomplete="off">
