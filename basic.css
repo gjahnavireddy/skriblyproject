@@ -37,6 +37,17 @@ body{
   text-decoration: none;
   font-size: 17px;
 }
+.bg-img1 {
+  background-image: url("bg3.jpg");
+  background-color: black;
+
+  min-height: 380px;
+
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
 
 .topnav a:hover {
   background-color: #ddd;
