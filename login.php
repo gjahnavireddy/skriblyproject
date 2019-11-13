@@ -55,6 +55,7 @@ mysqli_close($conn);
 <!DOCTYPE html>
 <html>
     <head>
+            <title>SKRIBLY</title>
             <link href="basic.css" rel="stylesheet">
     </head>
     <style>
