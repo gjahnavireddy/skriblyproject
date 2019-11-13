@@ -64,6 +64,7 @@ mysqli_close($conn);
         box-sizing: border-box;
         padding: 25px 35px;
         border-radius: 15px;
+        opacity:0.9;
         }
        
         label{
@@ -76,9 +77,6 @@ mysqli_close($conn);
             font-family:Arial, sans-serif;
             font-size:35px;
             text-align: center;
-        }
-        body{
-            background-color:peachpuff;
         }
         .button{
             background-color: palevioletred;
