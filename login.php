@@ -156,7 +156,7 @@ mysqli_close($conn);
                     alert("Please fill the field");
                     return false;
                 }
-                return location.href="mikeross.html"
+                return location.href="profile.html"
             }
         </script>
     </body>
