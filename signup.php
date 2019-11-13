@@ -32,7 +32,7 @@ mysqli_close($conn);
 <!DOCTYPE html>
 <html>
 <head>
-    <link rel="stylesheet" href="signup.css">
+    <link rel="stylesheet" href="basic.css">
 </head>
 <style>
         body{
@@ -59,7 +59,7 @@ mysqli_close($conn);
         top:50%;
         left:50%;
         position: absolute;
-        transform: translate(-50%,-50%);
+        transform: translate(-50%,-25%);
         box-sizing: border-box;
         padding: 25px 35px;
         border-radius: 15px;
@@ -103,7 +103,7 @@ mysqli_close($conn);
         color:black;
         }   
     </style>
-<body>
+<body class="bg-img1">
 
     <div class="signup">
         <form action="signup.php" method="post" onSubmit = "return check(this)">
