@@ -33,6 +33,7 @@ mysqli_close($conn);
 <!DOCTYPE html>
 <html>
 <head>
+    <title>SKRIBLY</title>
     <link rel="stylesheet" href="basic.css">
 </head>
 <style>
