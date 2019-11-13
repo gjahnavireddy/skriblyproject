@@ -19,3 +19,6 @@ This project stands out as most of the current websites do not offer the feature
 ### FUTURE IMPLEMENTATION:  
 A feature where the user may upload their own picture files to the comic.  
 A feature where the user can draw using mouse input.  
+
+mysql/data
+htdocs/skribly
