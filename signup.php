@@ -12,8 +12,9 @@ if($_SERVER['REQUEST_METHOD']=="POST")
         $username=mysqli_real_escape_string($conn,$_POST['username']);
         $email=mysqli_real_escape_string($conn,$_POST['email']);
         $password=md5($_POST['password']);
-        $sql = "INSERT INTO users(username, email, password)
-                VALUES ('$username', '$email', '$password')";
+        $profile_url="localhost/skribly/".$username.".html";
+        $sql = "INSERT INTO users(username, email, password,profile_url)
+                VALUES ('$username', '$email', '$password','$profile_url')";
 
         if ($conn->query($sql) === true) 
         {
@@ -109,7 +110,7 @@ mysqli_close($conn);
         <form action="signup.php" method="post" onSubmit = "return check(this)">
             <h1>Sign Up</h1>
             <label><b>Name</b></label>
-            <input type="text" name="name" placeholder="Enter Username" size=47 required autocomplete="off">
+            <input type="text" name="username" placeholder="Enter Username" size=47 required autocomplete="off">
             <label><b>Email</b></label>
             <input type="email" name="email" placeholder="Enter Email-Id" size=47 required autocomplete="off">
             <label><b>Password</b></label>
