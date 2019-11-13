@@ -55,6 +55,7 @@ mysqli_close($conn);
 <!DOCTYPE html>
 <html>
     <head>
+            <title>SKRIBLY</title>
             <link href="basic.css" rel="stylesheet">
     </head>
     <style>
@@ -79,6 +80,7 @@ mysqli_close($conn);
     box-sizing: border-box;
     padding: 50px 28px;
     border-radius: 16px;
+    opacity:0.9;
     }
    
     #up{
@@ -91,9 +93,6 @@ mysqli_close($conn);
         font-family:Arial, sans-serif;
         font-size:35px;
         text-align: center;
-    }
-    body{
-        background-color:peachpuff;
     }
     .button{
         background-color: palevioletred;

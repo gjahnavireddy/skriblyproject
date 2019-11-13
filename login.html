@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html>
     <head>
-            <link href="basic.css" rel="stylesheet">
+        <title>SKRIBLY</title>
+        <link href="basic.css" rel="stylesheet">
     </head>
     <style>
     input[type=text],
@@ -25,6 +26,7 @@
     box-sizing: border-box;
     padding: 50px 28px;
     border-radius: 16px;
+    opacity:0.9;
     }
    
     #up{
@@ -37,10 +39,7 @@
         font-family:Arial, sans-serif;
         font-size:35px;
         text-align: center;
-    }
-    body{
-        background-color:peachpuff;
-    }
+    }   
     .button{
         background-color: palevioletred;
         text-align: center;
@@ -76,8 +75,7 @@
                     <br>
                     <label id="up"><b>Password</b></label><br>
                     <input type="password" placeholder="Enter Password" size="45" maxlength="10" name="psw" required>
-                    <br>
-                                
+                    <br>                                
                     <button type="submit" class="button" onclick ="getProfile()">Login</button>
                     <button type="button" class="button" onclick="back()">Cancel</button><br><br>
                     <a href="#"  style=" padding-left: 95px;" >Forgot password?</a><br>
