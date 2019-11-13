@@ -41,7 +41,7 @@ if (mysqli_num_rows($check) > 0)
    {
         echo "<script>
             alert('The entered username or password does not exist.Please enter your details again.');
-            window.location.href='phlogin.php'</script>";
+            window.location.href='login.php'</script>";
         unset($name);
         unset($psd);
    }
@@ -128,10 +128,10 @@ mysqli_close($conn);
                 <div class="container">
                     <div class="head"><label id="head1">Welcome Back </label></div><br><br>
                     <label id="up" ><b>Username</b></label><br>
-                        <input type="text" placeholder="Enter Username" size="45" name="uname" required>
+                        <input type="text" placeholder="Enter Username" size="45" name="username" required>
                             <br>
                         <label id="up"><b>Password</b></label><br>
-                            <input type="password" placeholder="Enter Password" size="45" maxlength="10" name="psw" required>
+                            <input type="password" placeholder="Enter Password" size="45" maxlength="10" name="password" required>
                             <br>
                             
                         <button type="submit" class="button" onclick ="getProfile()">Login</button>
