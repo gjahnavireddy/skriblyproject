@@ -21,7 +21,7 @@
     top:50%;
     left:50%;
     position: absolute;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%,-25%);
     box-sizing: border-box;
     padding: 50px 28px;
     border-radius: 16px;
@@ -66,25 +66,26 @@
     
 </style>
 
-    <body>
+    <body class="bg-img1">
         <div class="login">
-             <form action="login.php" method="post">
+            <form action="login.php" method="post">
                 <div class="container">
                     <div class="head"><label id="head1">Welcome Back </label></div><br><br>
                     <label id="up" ><b>Username</b></label><br>
-                        <input type="text" placeholder="Enter Username" size="45" name="uname" required>
-                            <br>
-                        <label id="up"><b>Password</b></label><br>
-                            <input type="password" placeholder="Enter Password" size="45" maxlength="10" name="psw" required>
-                            <br>
-                            
-                        <button type="submit" class="button" onclick ="getProfile()">Login</button>
-                        <button type="button" class="button" onclick="back()">Cancel</button><br><br>
-                        <a href="#"  style=" padding-left: 95px;" >Forgot password?</a><br>
-                        <a href="#" style="padding-left: 80px"onclick="location.href='sign-up.html'">Don't have an account</a>
+                    <input type="text" placeholder="Enter Username" size="45" name="uname" required>
+                    <br>
+                    <label id="up"><b>Password</b></label><br>
+                    <input type="password" placeholder="Enter Password" size="45" maxlength="10" name="psw" required>
+                    <br>
+                                
+                    <button type="submit" class="button" onclick ="getProfile()">Login</button>
+                    <button type="button" class="button" onclick="back()">Cancel</button><br><br>
+                    <a href="#"  style=" padding-left: 95px;" >Forgot password?</a><br>
+                    <a href="#" style="padding-left: 80px"onclick="location.href='sign-up.html'">Don't have an account</a>
                 </div>
             </form>
         </div>
+
         <script>
             function back()
             {
