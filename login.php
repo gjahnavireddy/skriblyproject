@@ -75,7 +75,7 @@ mysqli_close($conn);
     top:50%;
     left:50%;
     position: absolute;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%,-25%);
     box-sizing: border-box;
     padding: 50px 28px;
     border-radius: 16px;
@@ -122,7 +122,7 @@ mysqli_close($conn);
     
 </style>
 
-    <body>
+    <body class="bg-img1">
         <div class="login">
              <form action="login.php" method="post">
                 <div class="container">
