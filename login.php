@@ -35,7 +35,7 @@ if (mysqli_num_rows($check) > 0)
     
    if($flag==1)
    {
-       echo "<script>window.location = 'mikeross.html'</script>";
+       echo "<script>window.location = 'profile.html'</script>";
    } 
    else
    {
