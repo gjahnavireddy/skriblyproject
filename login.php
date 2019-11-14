@@ -70,7 +70,7 @@ mysqli_close($conn);
     }
     .login{
     width:400px;
-    height:480px;
+    height:500px;
     background:white;
     color:black;
     top:50%;
