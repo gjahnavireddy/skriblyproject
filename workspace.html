@@ -19,19 +19,32 @@
                 transform: rotate(135deg);
                 -webkit-transform: rotate(135deg);
             }
-            .topnav a {
-                float: left;
-                text-align: center;
-                padding: 14px 16px;
-                text-decoration: none;
-                font-size: 17px;
-                background-color: rgba(0, 0, 0, 0.342);
-                color:white;
-            }
-            .topnav a:hover {
-                background-color: #ddd;
-                color: black;
-            }
+
+            .navbar {
+  overflow: hidden;
+  background-color:  rgb(46,46,46);
+}
+
+/* Style the navigation bar links */
+.navbar a {
+  float: left;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 20px;
+  text-decoration: none;
+}
+
+/* Right-aligned link */
+.navbar a.right {
+  float: right;
+}
+
+/* Change color on hover */
+.navbar a:hover {
+  background-color: rgb(112, 109, 109);
+  color: rgb(27, 25, 26);
+}
             .title{
                 text-align: center;
                 padding: 0% 20%;   
@@ -77,8 +90,16 @@
         </style>
     </head>
     <body>
-        <div class="topnav"><a onclick="location.href='mikeross.html'"><i class="arrow left"></i>Back</a></div>
-        <div id="title"><h1 style="color:white;font-size:50px">YOUR WORKSPACE</h1></div>
+        <div class="topnav"><a onclick="location.href='profile.html'"><i class="arrow left"></i>Back</a></div>
+        <div class="navbar">
+            <a onclick="location.href='index.html'">Home</a>
+            <a onclick="location.href='gallery.html'">Gallery</a>
+            <a onclick="location.href='tutorial.html'">Tutorial</a>
+            <a onclick="location.href='profile.html'">Go To your profile</a>
+            <a href="#" class="right" onclick="location.href='index.html'">Logout</a>
+          </div>
+          
+        <div id="title"><h1 style="color:white; text-font:Comic Sans ;font-size:50px">Create your Comic Strip now</h1></div>
         <div class="box">
             <div class="sidePanel"><br> <!-- have to align it to the left-->
                 <div class="dropdown">
