@@ -1,250 +1,251 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-
-<style>
-
-html {
-  box-sizing: border-box;
-  background-color: #99ebff;
-  text-align: center;
-}
-
-    
-*, *:before, *:after {
-  box-sizing: inherit;
-}
-
-input[type=text] {
-  width: 140px;
-  box-sizing: border-box;
-  border: 2px solid #ccc;
-  border-radius: 4px;
-  font-size: 16px;
-  color:white;
-  background-color: black;
-  background-image: url('searchicon.png');
-  background-position: 10px 10px;
-  background-repeat: no-repeat;
-  padding: 12px 20px 12px 40px;
-  -webkit-transition: width 0.4s ease-in-out;
-	transition: width 0.4s ease-in-out;
-	margin-right: 320px;
-}
-
-input[type=text]:focus {
-  width: 100%;
-}
-
-hr.newline {
-  border: 10px solid black;
-  border-radius: 5px;
-}
-
-.column {
-  float: left;
-  width: 33.3%;
-  margin-bottom: 16px;
-  padding: 0 8px;
-}
-
-@media screen and (max-width: 650px) {
-  .column {
-	width: 100%;
-	display: block;
-  }
-}
-
-.card {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-}
-
-.container {
-  padding: 0 16px;
-  background-color: black;
-  color:white;
-}
-
-.container::after, .row::after {
-  content: "";
-  clear: both;
-  display: table;
-}
-
-.title {
-  color: grey;
-}
-
-.button {
-  border: none;
-  outline: 0;
-  display: inline-block;
-  padding: 8px;
-  color: black;
-  background-color:white;
-  text-align: center;
-  cursor: pointer;
-  width: 100%;
-}
-
-.button:hover {
-  background-color:grey;
-}
-
-.posts:hover{
-	transform: scale(1.1) translate3d(30px,30px,30px);
-}
-
-.topnav a {
-  float: left;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-	font-size: 17px;
-	background-color: black;
-	color:white;
-}
-
-.topnav a:hover {
-  background-color: #ddd;
-  color: black;
-}
-
-i {
-  border: solid black;
-  border-width: 0 3px 3px 0;
-  display: inline-block;
-  padding: 3px;
-}
-
-.left {
-  transform: rotate(135deg);
-  -webkit-transform: rotate(135deg);
-}
-
-</style>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width = device-width, initial-scale = 1">
+    <style>
+        html {
+            box-sizing: border-box;
+            background-color: #99ebff;
+            text-align: center;
+        }
+        
+        *,
+        *:before,
+        *:after {
+            box-sizing: inherit;
+        }
+        
+        input[type=text] {
+            width: 140px;
+            box-sizing: border-box;
+            border: 2px solid #ccc;
+            border-radius: 4px;
+            font-size: 16px;
+            color: white;
+            background-color: black;
+            background-image: url('searchicon.png');
+            background-position: 10px 10px;
+            background-repeat: no-repeat;
+            padding: 12px 20px 12px 40px;
+            -webkit-transition: width 0.4s ease-in-out;
+            transition: width 0.4s ease-in-out;
+            margin-right: 320px;
+        }
+        
+        input[type=text]:focus {
+            width: 100%;
+        }
+        
+        hr.newline {
+            border: 10px solid black;
+            border-radius: 5px;
+        }
+        
+        .column {
+            float: left;
+            width: 33.3%;
+            margin-bottom: 16px;
+            padding: 0 8px;
+        }
+        
+        @media screen and (max-width: 650px) {
+            .column {
+                width: 100%;
+                display: block;
+            }
+        }
+        
+        .card {
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        }
+        
+        .container {
+            padding: 0 16px;
+            background-color: black;
+            color: white;
+        }
+        
+        .container::after,
+        .row::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+        
+        .title {
+            color: grey;
+        }
+        
+        .button {
+            border: none;
+            outline: 0;
+            display: inline-block;
+            padding: 8px;
+            color: black;
+            background-color: white;
+            text-align: center;
+            cursor: pointer;
+            width: 100%;
+        }
+        
+        .button:hover {
+            background-color: grey;
+        }
+        
+        .posts:hover {
+            transform: scale(1.1) translate3d(30px, 30px, 30px);
+        }
+        
+        .topnav a {
+            float: left;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-size: 17px;
+            background-color: black;
+            color: white;
+        }
+        
+        .topnav a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+        
+        i {
+            border: solid black;
+            border-width: 0 3px 3px 0;
+            display: inline-block;
+            padding: 3px;
+        }
+        
+        .left {
+            transform: rotate(135deg);
+            -webkit-transform: rotate(135deg);
+        }
+    </style>
 </head>
+
 <body>
 
 
-<div class="topnav">
-  <a onclick="location.href='index.html'"><i class="arrow left"></i>Back</a>
-  <a onclick="location.href='tutorial.html'">Tutorial</a>
-  <a onclick="location.href='login.php'" >Login</a>
-  <a onclick="location.href='sign-up.php'">Sign-Up</a>
-</div>
-<br>
-<br>
-<form>
-  <input type="text" name="search" placeholder="Search..">
-</form>
-<hr class="newline">
+    <div class="topnav">
+        <a onclick="location.href='index.html'"><i class="arrow left"></i>Back</a>
+        <a onclick="location.href='tutorial.html'">Tutorial</a>
+        <a onclick="location.href='login.php'">Login</a>
+        <a onclick="location.href='sign-up.php'">Sign-Up</a>
+    </div>
+    <br>
+    <br>
+    <form>
+        <input type="text" name="search" placeholder="Search..">
+    </form>
+    <hr class="newline">
 
 
-<div class="row">
-  <div class="column"id="column1">
-	<div class="card">
-  	<img class="posts" src="comic5dem.jpg" alt="Jane" style="width:100%">
-  	<div class="container">
-    	<h2>Jane Doe</h2>
-    	<p class="title">Cartoon Artist</p>
-    	<p><button class="button"onclick="location.href='profile.html'">See Profile</button></p>
-  	</div>
-	</div>
-  </div>
+    <div class="row">
+        <div class="column" id="column1">
+            <div class="card">
+                <img class="posts" src="comic5dem.jpg" alt="Jane" style="width:100%">
+                <div class="container">
+                    <h2>Jane Doe</h2>
+                    <p class="title">Cartoon Artist</p>
+                    <p><button class="button" onclick="location.href='profile.html'">See Profile</button></p>
+                </div>
+            </div>
+        </div>
 
-  <div class="column">
-	<div class="card">
-  	<img class="posts" src="comic6dem.jpg" alt="Mike" style="width:100%">
-  	<div class="container">
-    	<h2>Mike Ross</h2>
-    	<p class="title">Art Director</p>
-    	<p><button class="button"onclick="location.href='profile.html'">See Profile</button></p>
-  	</div>
-	</div>
-  </div>
-  <div class="column">
-	<div class="card">
-  	<img class="posts" src="comic1dem.jpg" alt="John" style="width:100%">
-  	<div class="container">
-    	<h2>John Doe</h2>
-    	<p class="title">Designer</p>
-    	<p><button class="button"onclick="location.href='profile.html'">See Profile</button></p>
-  	</div>
-	</div>
-  </div>
-</div>
+        <div class="column">
+            <div class="card">
+                <img class="posts" src="comic6dem.jpg" alt="Mike" style="width:100%">
+                <div class="container">
+                    <h2>Mike Ross</h2>
+                    <p class="title">Art Director</p>
+                    <p><button class="button" onclick="location.href='profile.html'">See Profile</button></p>
+                </div>
+            </div>
+        </div>
+        <div class="column">
+            <div class="card">
+                <img class="posts" src="comic1dem.jpg" alt="John" style="width:100%">
+                <div class="container">
+                    <h2>John Doe</h2>
+                    <p class="title">Designer</p>
+                    <p><button class="button" onclick="location.href='profile.html'">See Profile</button></p>
+                </div>
+            </div>
+        </div>
+    </div>
 
-<div class="row">
-  <div class="column"id="column1">
-	<div class="card">
-  	<img class="posts" src="comic3dem.jpg" alt="Jane" style="width:100%">
-  	<div class="container">
-    	<h2>Harry</h2>
-    	<p class="title">Cartoon Artist</p>
-    	<p><button class="button"onclick="location.href='profile.html'">See Profile</button></p>
-  	</div>
-	</div>
-  </div>
+    <div class="row">
+        <div class="column" id="column1">
+            <div class="card">
+                <img class="posts" src="comic3dem.jpg" alt="Jane" style="width:100%">
+                <div class="container">
+                    <h2>Harry</h2>
+                    <p class="title">Cartoon Artist</p>
+                    <p><button class="button" onclick="location.href='profile.html'">See Profile</button></p>
+                </div>
+            </div>
+        </div>
 
-  <div class="column">
-	<div class="card">
-  	<img class="posts" src="comic3dem.jpg" alt="Mike" style="width:100%">
-  	<div class="container">
-    	<h2>Ikea</h2>
-    	<p class="title">Art Director</p>
-    	<p><button class="button"onclick="location.href='profile.html'">Contact</button></p>
-  	</div>
-	</div>
-  </div>
-  <div class="column">
-	<div class="card">
-  	<img class="posts" src="comic2dem.jpg" alt="John" style="width:100%">
-  	<div class="container">
-    	<h2>Sheldon</h2>
-    	<p class="title">Designer</p>
-    	<p><button class="button"onclick="location.href='profile.html'">See Profile</button></p>
-  	</div>
-	</div>
-  </div>
-</div>
+        <div class="column">
+            <div class="card">
+                <img class="posts" src="comic3dem.jpg" alt="Mike" style="width:100%">
+                <div class="container">
+                    <h2>Ikea</h2>
+                    <p class="title">Art Director</p>
+                    <p><button class="button" onclick="location.href='profile.html'">Contact</button></p>
+                </div>
+            </div>
+        </div>
+        <div class="column">
+            <div class="card">
+                <img class="posts" src="comic2dem.jpg" alt="John" style="width:100%">
+                <div class="container">
+                    <h2>Sheldon</h2>
+                    <p class="title">Designer</p>
+                    <p><button class="button" onclick="location.href='profile.html'">See Profile</button></p>
+                </div>
+            </div>
+        </div>
+    </div>
 
-<div class="row">
-  <div class="column"id="column1">
-	<div class="card">
-  	<img class="posts" src="comic4dem.jpg" alt="Jane" style="width:100%">
-  	<div class="container">
-    	<h2>Griezman</h2>
-    	<p class="title">Cartoon Artist</p>
-    	<p><button class="button"onclick="location.href='profile.html'">See Profile</button></p>
-  	</div>
-	</div>
-  </div>
+    <div class="row">
+        <div class="column" id="column1">
+            <div class="card">
+                <img class="posts" src="comic4dem.jpg" alt="Jane" style="width:100%">
+                <div class="container">
+                    <h2>Griezman</h2>
+                    <p class="title">Cartoon Artist</p>
+                    <p><button class="button" onclick="location.href='profile.html'">See Profile</button></p>
+                </div>
+            </div>
+        </div>
 
-  <div class="column">
-	<div class="card">
-  	<img class="posts" src="comic1dem.jpg" alt="Mike" style="width:100%">
-  	<div class="container">
-    	<h2>Leo</h2>
-    	<p class="title">Art Director</p>
-    	<p><button class="button" onclick="location.href='profile.html'">See Profile</button></p>
-  	</div>
-	</div>
-  </div>
-  <div class="column">
-	<div class="card">
-  	<img class="posts" src="comic3dem.jpg" alt="John" style="width:100%">
-  	<div class="container">
-    	<h2>Khushei</h2>
-    	<p class="title">Designer</p>
-    	<p><button class="button"onclick="location.href='profile.html'">See Profile</button></p>
-  	</div>
-	</div>
-  </div>
-</div>
+        <div class="column">
+            <div class="card">
+                <img class="posts" src="comic1dem.jpg" alt="Mike" style="width:100%">
+                <div class="container">
+                    <h2>Leo</h2>
+                    <p class="title">Art Director</p>
+                    <p><button class="button" onclick="location.href='profile.html'">See Profile</button></p>
+                </div>
+            </div>
+        </div>
+        <div class="column">
+            <div class="card">
+                <img class="posts" src="comic3dem.jpg" alt="John" style="width:100%">
+                <div class="container">
+                    <h2>Khushei</h2>
+                    <p class="title">Designer</p>
+                    <p><button class="button" onclick="location.href='profile.html'">See Profile</button></p>
+                </div>
+            </div>
+        </div>
+    </div>
 
 </body>
+
 </html>
-
-

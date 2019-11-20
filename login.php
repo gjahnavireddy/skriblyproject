@@ -57,6 +57,7 @@ mysqli_close($conn);
     <head>
             <title>SKRIBLY</title>
             <link href="basic.css" rel="stylesheet">
+            <meta name="viewport" content="width = device-width, initial-scale = 1">
     </head>
     <style>
     input[type=text],

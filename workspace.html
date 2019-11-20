@@ -1,144 +1,157 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>SKRIBLY</title>
-        <style>
-            html {
-                box-sizing: border-box;
-                text-align: center;
-                background-color: black
-            }
-            i{
-                border: solid black;
-                border-width: 0 3px 3px 0;
-                display: inline-block;
-                padding: 3px;
-            }
 
-            .left{
-                transform: rotate(135deg);
-                -webkit-transform: rotate(135deg);
-            }
+<head>
+    <title>SKRIBLY</title>
+    <meta name="viewport" content="width = device-width, initial-scale = 1">
+    <style>
+        html {
+            box-sizing: border-box;
+            text-align: center;
+            background-color: black
+        }
+        
+        i {
+            border: solid black;
+            border-width: 0 3px 3px 0;
+            display: inline-block;
+            padding: 3px;
+        }
+        
+        .left {
+            transform: rotate(135deg);
+            -webkit-transform: rotate(135deg);
+        }
+        
+        .navbar {
+            overflow: hidden;
+            background-color: rgb(46, 46, 46);
+        }
+        /* Style the navigation bar links */
+        
+        .navbar a {
+            float: left;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 20px;
+            text-decoration: none;
+        }
+        /* Right-aligned link */
+        
+        .navbar a.right {
+            float: right;
+        }
+        /* Change color on hover */
+        
+        .navbar a:hover {
+            background-color: rgb(112, 109, 109);
+            color: rgb(27, 25, 26);
+        }
+        
+        .title {
+            text-align: center;
+            padding: 0% 20%;
+        }
+        
+        .box {
+            background-color: burlywood;
+            box-sizing: border-box;
+        }
+        
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+        
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+        
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+        
+        .desc {
+            text-align: center;
+        }
+        
+        .dropbtn {
+            background-color: grey;
+            color: white;
+            padding: 16px 16px 16px 16px;
+            font-size: 16px;
+            border: none;
+        }
+        
+        .option {
+            float: center;
+            background-color: grey;
+            border: none;
+            width: 100%;
+        }
+    </style>
+</head>
 
-            .navbar {
-  overflow: hidden;
-  background-color:  rgb(46,46,46);
-}
+<body>
+    <div class="topnav"><a onclick="location.href='profile.html'"><i class="arrow left"></i>Back</a></div>
+    <div class="navbar">
+        <a onclick="location.href='index.html'">Home</a>
+        <a onclick="location.href='gallery.html'">Gallery</a>
+        <a onclick="location.href='tutorial.html'">Tutorial</a>
+        <a onclick="location.href='profile.html'">Go To your profile</a>
+        <a href="#" class="right" onclick="location.href='index.html'">Logout</a>
+    </div>
 
-/* Style the navigation bar links */
-.navbar a {
-  float: left;
-  display: block;
-  color: white;
-  text-align: center;
-  padding: 14px 20px;
-  text-decoration: none;
-}
-
-/* Right-aligned link */
-.navbar a.right {
-  float: right;
-}
-
-/* Change color on hover */
-.navbar a:hover {
-  background-color: rgb(112, 109, 109);
-  color: rgb(27, 25, 26);
-}
-            .title{
-                text-align: center;
-                padding: 0% 20%;   
-            }
-            .box{
-                background-color: burlywood;
-                box-sizing: border-box;
-            }
-            .dropdown {
-                position: relative;
-                display: inline-block;
-                
-            }
-
-            .dropdown-content {
-                display: none;
-                position: absolute;
-                
-                min-width: 160px;
-                box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-                z-index: 1;
-            }
-
-            .dropdown:hover .dropdown-content {
-                display: block;
-            }
-            .desc {
-                text-align: center;
-            }
-            .dropbtn {
-                background-color:grey;
-                color: white;
-                padding: 16px 16px 16px 16px;
-                font-size: 16px;
-                border: none;
-            }
-            .option{
-                float: center;
-                background-color:grey;
-                border: none;
-                width: 100%;
-            }
-        </style>
-    </head>
-    <body>
-        <div class="topnav"><a onclick="location.href='profile.html'"><i class="arrow left"></i>Back</a></div>
-        <div class="navbar">
-            <a onclick="location.href='index.html'">Home</a>
-            <a onclick="location.href='gallery.html'">Gallery</a>
-            <a onclick="location.href='tutorial.html'">Tutorial</a>
-            <a onclick="location.href='profile.html'">Go To your profile</a>
-            <a href="#" class="right" onclick="location.href='index.html'">Logout</a>
-          </div>
-          
-        <div id="title"><h1 style="color:white; text-font:Comic Sans ;font-size:50px">Create your Comic Strip now</h1></div>
-        <div class="box">
-            <div class="sidePanel"><br> <!-- have to align it to the left-->
-                <div class="dropdown">
-                    <button class="dropbtn">GRID LAYOUT</button>
-                    <div class="dropdown-content">
-                        <button class="option"><br><img src="3x1.png" alt="1x3">
+    <div id="title">
+        <h1 style="color:white; font:Comic Sans ;font-size:50px">Create your Comic Strip now</h1>
+    </div>
+    <div class="box">
+        <div class="sidePanel"><br>
+            <!-- have to align it to the left-->
+            <div class="dropdown">
+                <button class="dropbtn">GRID LAYOUT</button>
+                <div class="dropdown-content">
+                    <button class="option"><br><img src="3x1.png" alt="1x3">
                         <div class="desc">1x3</div></button>
-                        <button class="option"><br><img src="4x1.png" alt="1x4">
+                    <button class="option"><br><img src="4x1.png" alt="1x4">
                         <div class="desc">1x4</div></button>
-                        <button class="option"><br><img src="2x2.png" alt="2x2">
+                    <button class="option"><br><img src="2x2.png" alt="2x2">
                         <div class="desc">2x2</div></button>
-                    </div>
                 </div>
-                <br><br>
-                <div class="dropdown">
-                    <button class="dropbtn">DIALOGUE BOXES</button>
-                    <div class="dropdown-content">
-                        <button class="option"><br><img src="3x1.png" alt="1x3"><!--have to change the images-->
-                        <div class="desc">1x3</div></button>
-                        <button class="option"><br><img src="4x1.png" alt="1x4"><!--have to change the images-->
-                        <div class="desc">1x4</div></button>
-                        <button class="option"><br><img src="2x2.png" alt="2x2"><!--have to change the images-->
-                        <div class="desc">2x2</div></button>
-                    </div>
-                </div>
-                <br><br>
-                <div class="dropdown">
-                    <button class="dropbtn">OBJECTS</button>
-                    <div class="dropdown-content">
-                        <button class="option"><br><img src="3x1.png" alt="1x3"><!--have to change the images-->
-                        <div class="desc">1x3</div></button>
-                        <button class="option"><br><img src="4x1.png" alt="1x4"><!--have to change the images-->
-                        <div class="desc">1x4</div></button>
-                        <button class="option"><br><img src="2x2.png" alt="2x2"><!--have to change the images-->
-                        <div class="desc">2x2</div></button>
-                    </div>
-                </div><br><br>
             </div>
-            <div class="canvas"></div><!--white container div-->
+            <br><br>
+            <div class="dropdown">
+                <button class="dropbtn">DIALOGUE BOXES</button>
+                <div class="dropdown-content">
+                    <button class="option"><br><img src="3x1.png" alt="1x3"><!--have to change the images-->
+                        <div class="desc">1x3</div></button>
+                    <button class="option"><br><img src="4x1.png" alt="1x4"><!--have to change the images-->
+                        <div class="desc">1x4</div></button>
+                    <button class="option"><br><img src="2x2.png" alt="2x2"><!--have to change the images-->
+                        <div class="desc">2x2</div></button>
+                </div>
+            </div>
+            <br><br>
+            <div class="dropdown">
+                <button class="dropbtn">OBJECTS</button>
+                <div class="dropdown-content">
+                    <button class="option"><br><img src="3x1.png" alt="1x3"><!--have to change the images-->
+                        <div class="desc">1x3</div></button>
+                    <button class="option"><br><img src="4x1.png" alt="1x4"><!--have to change the images-->
+                        <div class="desc">1x4</div></button>
+                    <button class="option"><br><img src="2x2.png" alt="2x2"><!--have to change the images-->
+                        <div class="desc">2x2</div></button>
+                </div>
+            </div><br><br>
         </div>
-    </body>
+        <div class="canvas"></div>
+        <!--white container div-->
+    </div>
+</body>
+
 </html>
