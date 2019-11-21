@@ -149,6 +149,7 @@
         <a onclick="location.href='workspacebs.html'">Workspace</a>
         <a onclick="location.href='tutorial.html'">Tutorial</a>
         <a href="#" class="right" onclick="changebg()">Change theme</a>
+        <a href="#" class="right" onclick="nochangebg()">Default theme</a>
         <a href="#" class="right" onclick="location.href='index.html'">Logout</a>
     </div>
 
@@ -182,7 +183,7 @@ function changebg()
                   bgtheme[0].style.backgroundImage="url('newbg1.jpg')";
                   localStorage.setItem("bgimg","url('newbg1.jpg')");
               }
-              function nochange(){
+              function nochangebg(){
                 
                 bgtheme[0].style.backgroundImage="url('bg8.jpg')";
                 localStorage.setItem("bgimg","url('bg8.jpg')");
