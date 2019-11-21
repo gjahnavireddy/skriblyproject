@@ -159,27 +159,39 @@
               document.getElementById("defaultOpen").click();
 
 
-
+              var h2=document.getElementsByTagName("h2");
               var body=document.getElementsByTagName("body");
              
               function changetheme()
               {
-
+                  h2[0].style.color="white";
+                  localStorage.setItem("txtcolor","white");
+                  
                   body[0].style.backgroundColor="rgb(23, 34, 70)";
                   localStorage.setItem("color","rgb(23, 34, 70)");
               }
               function nochange(){
+                h2[0].style.color="black";
+                localStorage.setItem("txtcolor","black");
                 body[0].style.backgroundColor="white";
                 localStorage.setItem("color","white");
 
               }
               window.onstorage=dem;
+              if(localStorage.getItem("txtcolor"))
+              {
+                h2[0].style.color=localStorage.getItem("txtcolor");
+              } 
               if(localStorage.getItem("color")){
+                
                 body[0].style.backgroundColor=localStorage.getItem("color");
 
               }
+
               function dem(){
                 body.style.background=localStorage.getItem("color");
+                h2.style.color=localStorage.getItem("txtcolor");
+              
               }
 
               </script>
