@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <link href="basic.css" rel="stylesheet">
+        
         <title>SKRIBLY</title>
     <style>
-
-    body{
+        body {
         background-color: rgb(236, 131, 131);
     }
-    .navbar {
+    
+.navbar {
   overflow: hidden;
   background-color:  rgb(46,46,46);
 }
@@ -33,10 +33,12 @@
   background-color: rgb(112, 109, 109);
   color: rgb(27, 25, 26);
 }
+
+/* Style the tab */
 .tab {
   float: left;
   border: 1px solid #ccc;
-  background-color: #cabfbf;
+  background-color: #f1f1f1;
   width: 30%;
   height: 300px;
 }
@@ -136,9 +138,7 @@
                     <h3>Browse to upload images to your comics</h3>
                 </div>
 
-                <div id="div2" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
-                  
-              
+             
               <script>
               function openTab(evt, TabName) {
                 var i, tabcontent, tablinks;
@@ -158,4 +158,6 @@
               document.getElementById("defaultOpen").click();
               </script>
     </body>
+
+
 </html>
