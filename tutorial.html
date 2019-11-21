@@ -40,7 +40,7 @@
             float: left;
             border: 1px solid #ccc;
             background-color: #f1f1f1;
-            width: 30%;
+            width: 20%;
             height: 300px;
         }
         /* Style the buttons inside the tab */
@@ -88,7 +88,7 @@
         <a onclick="location.href='workspace.html'">Workspace</a>
         <a onclick="location.href='profile.html'">Go to your profile</a>
         <a href="#" class="right" onclick="changetheme()">Night mode</a>
-        <a href="#" class="right" onclick="nochange()">light mode</a>
+        <a href="#" class="right" onclick="nochange()">Light mode</a>
     </div>
     <h2 style="text-align:center;">Getting started with Skribly</h2>
     <div class="tab">
@@ -165,8 +165,8 @@
         }
 
         function nochange() {
-            body[0].style.backgroundColor = "white";
-            localStorage.setItem("color", "white");
+            body[0].style.backgroundColor = "rgb(236, 131, 131)";
+            localStorage.setItem("color", "rgb(236, 131, 131)");
 
         }
         window.onstorage = dem;
