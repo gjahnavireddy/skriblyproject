@@ -5,12 +5,12 @@
         <title>SKRIBLY</title>
     <style>
         body {
-        background-color: rgb(236, 131, 131);
+        background-color: rgb(23, 34, 70);
     }
     
 .navbar {
   overflow: hidden;
-  background-color:  rgb(46,46,46);
+  background-color:  rgb(236, 131, 131);
 }
 
 /* Style the navigation bar links */
@@ -91,7 +91,8 @@
             <a onclick="location.href='gallery.html'">Gallery</a>
             <a onclick="location.href='workspace.html'">Workspace</a>
             <a onclick="location.href='profile.html'">Go to your profile</a>
-            <a href="#" class="right" onclick="location.href='index.html'">Logout</a>
+            <a href="#" class="right" onclick="changetheme()">Night mode</a>
+            <a href="#" class="right" onclick="nochange()">light mode</a>
           </div>
           <h2 style="text-align:center;">Getting started with Skribly</h2>
           <div class="tab">
@@ -156,7 +157,33 @@
               
               // Get the element with id="defaultOpen" and click on it
               document.getElementById("defaultOpen").click();
+
+
+
+              var body=document.getElementsByTagName("body");
+             
+              function changetheme()
+              {
+
+                  body[0].style.backgroundColor="rgb(23, 34, 70)";
+                  localStorage.setItem("color","rgb(23, 34, 70)");
+              }
+              function nochange(){
+                body[0].style.backgroundColor="white";
+                localStorage.setItem("color","white");
+
+              }
+              window.onstorage=dem;
+              if(localStorage.getItem("color")){
+                body[0].style.backgroundColor=localStorage.getItem("color");
+
+              }
+              function dem(){
+                body.style.background=localStorage.getItem("color");
+              }
+
               </script>
+
     </body>
 
 
