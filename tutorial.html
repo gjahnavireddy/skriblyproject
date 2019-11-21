@@ -3,8 +3,159 @@
     <head>
         <link href="basic.css" rel="stylesheet">
         <title>SKRIBLY</title>
+    <style>
+
+    body{
+        background-color: rgb(236, 131, 131);
+    }
+    .navbar {
+  overflow: hidden;
+  background-color:  rgb(46,46,46);
+}
+
+/* Style the navigation bar links */
+.navbar a {
+  float: left;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 20px;
+  text-decoration: none;
+}
+
+/* Right-aligned link */
+.navbar a.right {
+  float: right;
+}
+
+/* Change color on hover */
+.navbar a:hover {
+  background-color: rgb(112, 109, 109);
+  color: rgb(27, 25, 26);
+}
+.tab {
+  float: left;
+  border: 1px solid #ccc;
+  background-color: #cabfbf;
+  width: 30%;
+  height: 300px;
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+  display: block;
+  background-color: inherit;
+  color: black;
+  padding: 22px 16px;
+  width: 100%;
+  border: none;
+  outline: none;
+  text-align: left;
+  cursor: pointer;
+  transition: 0.3s;
+  font-size: 17px;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: #ddd;
+}
+
+/* Create an active/current "tab button" class */
+.tab button.active {
+  background-color: #ccc;
+}
+
+/* Style the tab content */
+.tabcontent {
+  float: left;
+  padding: 0px 12px;
+  border: 1px solid #ccc;
+  width: 70%;
+  border-left: none;
+  height: 300px;
+}
+
+
+  
+    
+    
+    </style>
     </head>
+
     <body>
-            <div id="title">TUTORIAL</div>
+        <div class="navbar">
+            <a onclick="location.href='index.html'">Home</a>
+            <a onclick="location.href='gallery.html'">Gallery</a>
+            <a onclick="location.href='workspace.html'">Workspace</a>
+            <a onclick="location.href='profile.html'">Go to your profile</a>
+            <a href="#" class="right" onclick="location.href='index.html'">Logout</a>
+          </div>
+          <h2 style="text-align:center;">Getting started with Skribly</h2>
+          <div class="tab">
+                <button class="tablinks" onclick="openTab(event, 'grids')" id="defaultOpen">Grids</button>
+                <button class="tablinks" onclick="openTab(event, 'characters')">Characters</button>
+                <button class="tablinks" onclick="openTab(event, 'dialoguebox')">Dialogue Boxes</button0>
+                <button class="tablinks" onclick="openTab(event, 'uploadimg')">Upload Images</button>
+              </div>
+              
+              <div id="grids" class="tabcontent">
+                <h3>Select a grid</h3>
+                <img src="2x2.png" style="width:20%">
+                <img src="3x1.png" style="width:20%">
+                <img src="4x1.png" style="width:20%">
+
+              </div>
+              
+              <div id="characters" class="tabcontent">
+                <h3>Select characters </h3>
+                
+                 <img src="charac8.jpg" style="width:10%">
+                 <img src="charac11.jpg" style="width:10%">
+                 <img src="charac12.jpg" style="width:10%">
+                 <img src="charac13.jpg" style="width:10%">
+                 <img src="charac14.jpg" style="width:10%">
+                 <img src="charac16.jpg" style="width:10%">
+                 <img src="charac17.jpg" style="width:10%">
+                 <img src="charac18.jpg" style="width:10%">
+                 <img src="charac15.jpg" style="width:10%">
+                  
+              </div>
+              
+              <div id="dialoguebox" class="tabcontent">
+                <h3>Choose dialogue boxes</h3>
+                  <img src="box1.png" style="width:10%">
+                  <img src="box2.jpg" style="width:10%">
+                  <img src="box3.jpg" style="width:10%">
+                  <img src="box4.png" style="width:10%">
+                  <img src="box5.png" style="width:10%">
+                  <img src="box6.jpg" style="width:10%">
+              </div>
+
+              <div id="uploadimg" class="tabcontent">
+                    <h3>Browse to upload images to your comics</h3>
+                </div>
+
+                <div id="div2" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                  
+              
+              <script>
+              function openTab(evt, TabName) {
+                var i, tabcontent, tablinks;
+                tabcontent = document.getElementsByClassName("tabcontent");
+                for (i = 0; i < tabcontent.length; i++) {
+                  tabcontent[i].style.display = "none";
+                }
+                tablinks = document.getElementsByClassName("tablinks");
+                for (i = 0; i < tablinks.length; i++) {
+                  tablinks[i].className = tablinks[i].className.replace(" active", "");
+                }
+                document.getElementById(TabName).style.display = "block";
+                evt.currentTarget.className += " active";
+              }
+              
+              // Get the element with id="defaultOpen" and click on it
+              document.getElementById("defaultOpen").click();
+              </script>
     </body>
 </html>
