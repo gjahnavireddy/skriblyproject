@@ -14,6 +14,9 @@
         body {
             font-family: Arial, Helvetica, sans-serif;
             margin: 0;
+            background-image: url("bg8.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
         }
         /* Header/logo Title */
         /* Increase the font size of the heading */
@@ -76,9 +79,7 @@
             -ms-flex: 70%;
             /* IE10 */
             flex: 70%;
-            background-image: url("bg8.jpg");
-            background-repeat: no-repeat;
-            background-size: cover;
+        
             padding: 20px;
         }
         /* Fake image, just for this example */
@@ -107,12 +108,16 @@
             display: table;
             color: rgb(22, 19, 19);
         }
-        
-        hr.newline {
-            border: 5px solid rgb(46, 46, 46);
-            border-radius: 3px;
-        }
-        /* Footer 
+      
+        .dropbtn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+}
+
+       /* Footer 
 .footer {
 	padding: 7px;
 	text-align: center;
@@ -138,13 +143,13 @@
 
 <body>
 
-    <hr class="newline">
-
     <div class="navbar">
         <a onclick="location.href='index.html'">Home</a>
         <a onclick="location.href='gallery.html'">Gallery</a>
         <a onclick="location.href='workspacebs.html'">Workspace</a>
         <a onclick="location.href='tutorial.html'">Tutorial</a>
+        <a href="#" class="right" onclick="changebg()">Change theme</a>
+        <a href="#" class="right" onclick="nochangebg()">Default theme</a>
         <a href="#" class="right" onclick="location.href='index.html'">Logout</a>
     </div>
 
@@ -170,7 +175,33 @@
 </div>
 
 
+<script>
+var bgtheme=document.getElementsByTagName("body");
+function changebg()
+              {
+                  
+                  bgtheme[0].style.backgroundImage="url('newbg1.jpg')";
+                  localStorage.setItem("bgimg","url('newbg1.jpg')");
+              }
+              function nochangebg(){
+                
+                bgtheme[0].style.backgroundImage="url('bg8.jpg')";
+                localStorage.setItem("bgimg","url('bg8.jpg')");
 
+              }
+              
+              if(localStorage.getItem("bgimg")){
+                
+                bgtheme[0].style.backgroundImage=localStorage.getItem("bgimg");
+
+              }
+
+              function dem(){
+                body.style.background=localStorage.getItem("bgimg");
+               
+              }
+
+</script>
 
 
 
