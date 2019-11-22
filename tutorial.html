@@ -6,7 +6,6 @@
     <title>SKRIBLY</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
-    <link href="https://fonts.googleapis.com/css?family=Cabin:400,700&display=swap" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
     <style>
@@ -79,14 +78,26 @@
         .tabcontent {
             float: left;
             padding: 0px 12px;
+            margin-left: 2%;
             border: 1px solid #ccc;
-            width: 70%;
+            width: 75%;
             border-left: none;
             height: 300px;
+            background-color: white;
         }
         
         #slides {
-            margin-top: 25%;
+            margin-top: 24%;
+            position: absolute;
+            width: 100%;
+        }
+        
+        hr.newline {
+            position: absolute;
+            border: 10px solid white;
+            border-radius: 5px;
+            margin-top: 23%;
+            width: 98.5%;
         }
     </style>
 </head>
@@ -144,10 +155,10 @@
     <div id="uploading" class="tabcontent">
         <h3>Browse to upload images to your comics</h3>
     </div>
-
+    <hr class="newline">
     <!--SLIDESHOW-->
     <div id="slides">
-        <h2>Example</h2>
+        <h3 style="margin-left: 45%;">Example</h3>
         <div id="myCarousel" class="carousel slide" data-ride="carousel">
             <!-- Indicators -->
             <ol class="carousel-indicators">
@@ -159,15 +170,15 @@
             <!-- Wrapper for slides -->
             <div class="carousel-inner">
                 <div class="item active">
-                    <img src="slide1.png" style="width:60%;">
+                    <img src="slide1.png" style="width:60%;margin-left: 20%;">
                 </div>
 
                 <div class="item">
-                    <img src="slide2.png" style="width:60%;">
+                    <img src="slide2.png" style="width:60%;margin-left: 20%;">
                 </div>
 
                 <div class="item">
-                    <img src="slide3.png" style="width:60%;">
+                    <img src="slide3.png" style="width:60%;margin-left: 20%;">
                 </div>
             </div>
 
@@ -199,17 +210,20 @@
             evt.currentTarget.className += " active";
         }
 
-        
+
         document.getElementById("defaultOpen").click();
 
 
         var h2 = document.getElementsByTagName("h2");
+        var h3 = document.getElementsByTagName("h3");
         var body = document.getElementsByTagName("body");
 
         function changetheme() {
             h2[0].style.color = "white";
             localStorage.setItem("txtcolor", "white");
-
+            for (var i = 0; i < h3.length; i++) {
+                h3[i].style.color = "white";
+            }
             body[0].style.backgroundColor = "rgb(23, 34, 70)";
             localStorage.setItem("color", "rgb(23, 34, 70)");
         }
@@ -217,6 +231,9 @@
         function nochange() {
             h2[0].style.color = "black";
             localStorage.setItem("txtcolor", "black");
+            for (var i = 0; i < h3.length; i++) {
+                h3[i].style.color = "black";
+            }
             body[0].style.backgroundColor = " rgb(236, 131, 131)";
             localStorage.setItem("color", " rgb(236, 131, 131)");
 
