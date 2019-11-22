@@ -5,6 +5,7 @@
     <title>Page Title</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width = device-width, initial-scale = 1">
+    <link href="https://fonts.googleapis.com/css?family=Cabin:400,700&display=swap" rel="stylesheet">
     <style>
         * {
             box-sizing: border-box;
@@ -12,7 +13,7 @@
         /* Style the body */
         
         body {
-            font-family: Arial, Helvetica, sans-serif;
+            font-family:'Cabin';
             margin: 0;
             background-image: url("bg8.jpg");
             background-repeat: no-repeat;
@@ -30,7 +31,7 @@
             overflow: hidden;
             background-color: rgb(46, 46, 46);
         }
-        /* Style the navigation bar links */
+        
         
         .navbar a {
             float: left;
@@ -40,18 +41,18 @@
             padding: 14px 20px;
             text-decoration: none;
         }
-        /* Right-aligned link */
+       
         
         .navbar a.right {
             float: right;
         }
-        /* Change color on hover */
+        
         
         .navbar a:hover {
             background-color: rgb(112, 109, 109);
             color: rgb(27, 25, 26);
         }
-        /* Column container */
+        
         
         .row {
             display: -ms-flexbox;
@@ -62,27 +63,26 @@
             flex-wrap: wrap;
             text-align: center;
         }
-        /* Create two unequal columns that sits next to each other */
-        /* Sidebar/left column */
+        
         
         .side {
             -ms-flex: 20%;
-            /* IE10 */
+            
             flex: 20%;
             color: white;
             background-color: rgb(46, 46, 46);
             padding: 20px;
         }
-        /* Main column */
+        
         
         .main {
             -ms-flex: 70%;
-            /* IE10 */
+            
             flex: 70%;
         
             padding: 20px;
         }
-        /* Fake image, just for this example */
+        
         
         .fakeimg {
             background-color: #aaa;
@@ -117,28 +117,7 @@
   border: none;
 }
 
-       /* Footer 
-.footer {
-	padding: 7px;
-	text-align: center;
-	background: rgb(7, 7, 7);
-}*/
-        /* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
-        
-        @media screen and (max-width: 700px) {
-            .row {
-                flex-direction: column;
-            }
-        }
-        /* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
-        
-        @media screen and (max-width: 400px) {
-            .navbar a {
-                float: none;
-                width: 100%;
-            }
-        }
-    </style>
+</style>
 </head>
 
 <body>
