@@ -5,6 +5,7 @@
         <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
 
         <link href='https://fonts.googleapis.com/css?family=Pacifico' rel="stylesheet" type='text/css'>
+        <link href="https://fonts.googleapis.com/css?family=Cabin:400,700&display=swap" rel="stylesheet">
     
     
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -17,7 +18,7 @@
     <style>
         body {
         font-size: 62.5%;
-        font-family: arial, sans-serif;
+        font-family: 'Cabin';
         background-color: rgb(236, 131, 131);
         }
         h2{
@@ -34,16 +35,6 @@
         height:8vh;
         border-radius: 0.5vw;
         }
-
-        /* Style the links inside the navigation bar 
-        .topnav button {
-        float: left;
-        text-align: center;
-        padding: 9px 12px;
-        text-decoration: none;
-        font-size: 18px;
-        overflow: hidden;
-        }*/
         .topnav button{
             font-size: 17px;    
             border: none;
@@ -134,9 +125,21 @@
                         <button id="1x4"><img id ="imgrid"src="4x1.png" alt="1x3"></button>
                         <button id="2x2"><img id ="imgrid"src="2x2.png" alt="1x3"></button>
                 </div>
+                <button id="menu2">Characters</button>
+                <div class="menu1-content">
+                        <button id="1x3" onclick="grid()"><img id ="imgrid"src="3x1.png" alt="1x3" ></button>
+                        <button id="1x4"><img id ="imgrid"src="4x1.png" alt="1x3"></button>
+                        <button id="2x2"><img id ="imgrid"src="2x2.png" alt="1x3"></button>
+                </div>
+                <button id="menu3">Dialogue Boxes</button>
+                <div class="menu1-content">
+                        <button id="1x3" onclick="grid()"><img id ="imgrid"src="3x1.png" alt="1x3" ></button>
+                        <button id="1x4"><img id ="imgrid"src="4x1.png" alt="1x3"></button>
+                        <button id="2x2"><img id ="imgrid"src="2x2.png" alt="1x3"></button>
+                </div>
+            
             </div>
-                <button id="#menu2">Characters</button>
-                <button id="#menu3">Dialogue Boxes</button>
+                
              
         </div><br>
         <canvas id="Canvas"></canvas>
