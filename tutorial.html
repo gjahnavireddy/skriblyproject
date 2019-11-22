@@ -158,7 +158,7 @@
     <hr class="newline">
     <!--SLIDESHOW-->
     <div id="slides">
-        <h3 style="margin-left: 45%;">Example</h3>
+        <h2 id="example" style="margin-left: 45%;">Example</h2>
         <div id="myCarousel" class="carousel slide" data-ride="carousel">
             <!-- Indicators -->
             <ol class="carousel-indicators">
@@ -216,14 +216,13 @@
 
         var h2 = document.getElementsByTagName("h2");
         var h3 = document.getElementsByTagName("h3");
+        var h = document.getElementById("example");
         var body = document.getElementsByTagName("body");
 
         function changetheme() {
             h2[0].style.color = "white";
             localStorage.setItem("txtcolor", "white");
-            for (var i = 0; i < h3.length; i++) {
-                h3[i].style.color = "white";
-            }
+            h.style.color = "white";
             body[0].style.backgroundColor = "rgb(23, 34, 70)";
             localStorage.setItem("color", "rgb(23, 34, 70)");
         }
@@ -234,6 +233,7 @@
             for (var i = 0; i < h3.length; i++) {
                 h3[i].style.color = "black";
             }
+            h.style.color = "black";
             body[0].style.backgroundColor = " rgb(236, 131, 131)";
             localStorage.setItem("color", " rgb(236, 131, 131)");
 
